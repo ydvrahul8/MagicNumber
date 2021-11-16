@@ -1,0 +1,16 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+
+dependencies {
+    implementation project(':mn_utils')
+
+    // Kotlin
+    implementation Dependencies.kotlin
+    implementation Dependencies.MOSHI
+    kapt Dependencies.MOSHI_KAPT
+}
+repositories {
+    mavenCentral()
+}

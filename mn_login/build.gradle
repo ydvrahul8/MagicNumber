@@ -1,0 +1,57 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'dagger.hilt.android.plugin'
+dependencies {
+    implementation project(':mn_assets')
+    implementation project(':mn_utils')
+    implementation project(':mn_api')
+    implementation project(':mn_model')
+    implementation project(':mn_route')
+
+    // Kotlin
+    implementation Dependencies.kotlin
+
+    implementation Dependencies.ANDROID_CONSTRAINT_LAYOUT
+    implementation Dependencies.ANDROIDX_FRAGMENT
+    implementation Dependencies.ANDROIDX_LEANBACK
+    implementation Dependencies.ANDROID_MATERIAL_DESIGN
+
+
+    //Hilt
+    implementation Dependencies.HILT
+    implementation Dependencies.HILT_VIEWMODEL
+    kapt Dependencies.HILT_COMPILER
+    kapt Dependencies.HILT_ANDROID_COMPILER
+
+    //coroutine
+    implementation Dependencies.COROUTINES_CORE
+    implementation Dependencies.COROUTINES_ANDROID
+
+    //lifecycle
+    implementation Dependencies.LIFECYCLE_LIVEDATA
+    implementation Dependencies.LIFECYCLE_COMMON
+    implementation Dependencies.LIFECYCLE
+
+    //otp
+    implementation Dependencies.OTP_VIEW
+
+    //auth0
+    implementation Dependencies.AUHT0
+
+    //Retrofit
+    implementation Dependencies.RETROFIT
+    implementation Dependencies.RETROFIT_CONVERTER
+
+    //Moshi
+    implementation Dependencies.MOSHI
+    kapt Dependencies.MOSHI_KAPT
+
+    //coroutine
+    implementation Dependencies.COROUTINES_CORE
+    implementation Dependencies.COROUTINES_ANDROID
+
+    //country code picker
+    implementation Dependencies.COUNTRY_PICKER
+
+}

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MagicNumber</string>
+    <string name="movies">Movies</string>
+    <string name="account">Account</string>
+    <string name="originals">Originals</string>
+    <string name="home">Home</string>
+    <string name="upcoming">Upcoming</string>
+    <string name="profile">Profile</string>
+    <string name="exit">Exit</string>
+    <string name="play">Play</string>
+
+    <string name="schema">magic_number</string>
+
+    <string name="host_splash">splash</string>
+    <string name="host_dashboard">dashboard</string>
+    <string name="host_player">player</string>
+    <string name="host_main">main</string>
+    <string name="host_login">login</string>
+    <string name="login_or_signup">Login / SignUp from Mobile Number</string>
+    <string name="verification_code_sent_to">Verification Code Sent to \n %1$s</string>
+    <string name="get_otp">Get OTP</string>
+    <string name="submit_otp">Submit OTP</string>
+    <string name="com_auth0_domain">planetmarathi-development.us.auth0.com</string>
+    <string name="com_auth0_client_id">ip0NuU28WwrnUJJUKl6gcFNDwVrWclqn</string>
+
+    <string name="note_hint">
+        <font color="#ff0066">Note: </font> <font color="#808080">Please enter mobile number with country code(e.g +91 for India)</font>
+    </string>
+
+    <string name="term_and_condition">
+        <font color="#808080">By continuing, you agree to our</font> <font color="#ff0066">Terms of Use</font>\n
+        <font color="#808080">and acknowledge that you have read our </font><font color="#ff0066">Privacy Policy.</font>
+    </string>
+
+    <string name="how_to_purchase_plan">How to purchase plan</string>
+    <string name="step_1">1. Visit <font color="#ff0066">www.planetmarathi.com/pmtv</font> form your mobile or computer/laptop.</string>
+    <string name="step_2">2. Sign in or create account.</string>
+    <string name="step_3">3. Select plan &amp; make payment.</string>
+    <string name="step_4">4. Login in TV App with your account to watch paid content.</string>
+
+    <string name="unsubscribed">You do not have Subscription</string>
+    <string name="expiry_date">Expiry Date: %1$s</string>
+    <string name="version">V %1$s</string>
+    <string name="enter_yout_mobile">Enter your mobile number</string>
+    <string name="enter_phone">Enter Phone Number</string>
+
+</resources>

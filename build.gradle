@@ -1,0 +1,78 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:${Versions.gradle}"
+        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.31'
+        classpath "com.google.dagger:hilt-android-gradle-plugin:${Versions.hilt}"
+        classpath Dependencies.ktlint
+        classpath Dependencies.ben_mane_gralde
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+    }
+}
+
+subprojects {
+    afterEvaluate { project ->
+        if (project.hasProperty('android')) {
+            apply plugin: "com.github.ben-manes.versions"
+
+            android {
+                compileSdkVersion ConfigData.compileSdkVersion
+
+                defaultConfig {
+                    minSdkVersion ConfigData.minSdkVersion
+                    targetSdkVersion ConfigData.targetSdkVersion
+                    vectorDrawables.useSupportLibrary = true
+                }
+
+                compileOptions {
+                    sourceCompatibility ConfigData.javaVersion
+                    targetCompatibility ConfigData.javaVersion
+                }
+
+                kotlinOptions {
+                    jvmTarget = ConfigData.jvmTarget
+                }
+
+                buildFeatures {
+                    dataBinding true
+                }
+                buildTypes {
+                    debug {
+                        buildConfigField 'String','BASE_URL','"https://dev.media.pmapi.in/"'
+                        buildConfigField 'String','AUTH_URL','"https://dev.auth.pmapi.in/"'
+                        buildConfigField 'String','ORDERS_URL','"https://dev.orders.pmapi.in/"'
+                        buildConfigField 'String','AUTH_DOMAIN','"planetmarathi-development.us.auth0.com"'
+                        buildConfigField 'String','AUTH_CLIENT_ID','"ip0NuU28WwrnUJJUKl6gcFNDwVrWclqn"'
+                    }
+                    release {
+                        buildConfigField 'String','BASE_URL','" https://media.pmapi.in/"'
+                        buildConfigField 'String','AUTH_URL','"https://auth.pmapi.in/"'
+                        buildConfigField 'String','ORDERS_URL','"https://orders.pmapi.in/"'
+                        buildConfigField 'String','AUTH_DOMAIN','"auth.planetmarathi.com"'
+                        buildConfigField 'String','AUTH_CLIENT_ID','"MRen66PHAcVHcsd74s50DWEZ7Ii8MdZa"'
+                    }
+                }
+                dependencies {
+                    implementation Dependencies.ANDROID_APP_COMPAT
+                }
+            }
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

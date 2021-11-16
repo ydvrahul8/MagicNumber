@@ -1,0 +1,87 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply from: 'https://raw.githubusercontent.com/JakeWharton/SdkSearch/master/gradle/projectDependencyGraph.gradle'
+apply plugin: 'org.jlleitschuh.gradle.ktlint'
+apply plugin: 'dagger.hilt.android.plugin'
+
+android {
+   /* signingConfigs {
+        debug {
+            storeFile file('C:\\Users\\ydvra\\AndroidStudioProjects\\PlanetMarathiTV\\android-keystore.jks')
+            storePassword 'grantaccess'
+            keyPassword 'grantaccess'
+            keyAlias 'my-key-alias'
+        }
+        release {
+            storeFile file('C:\\Users\\ydvra\\AndroidStudioProjects\\PlanetMarathiTV\\android-keystore.jks')
+            storePassword 'grantaccess'
+            keyPassword 'grantaccess'
+            keyAlias 'my-key-alias'
+        }
+    }*/
+    defaultConfig {
+        applicationId = "com.planetmarathi.tv"
+        versionCode = ConfigData.versionCode
+        versionName = ConfigData.versionName
+       // manifestPlaceholders = [auth0Domain: "@string/com_auth0_domain", auth0Scheme: "https"]
+    }
+    buildTypes {
+        debug {
+            debuggable true
+            multiDexEnabled true
+            minifyEnabled false
+            shrinkResources false
+        }
+        release {
+            debuggable false
+            minifyEnabled true
+            shrinkResources true
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+           // signingConfig signingConfigs.release
+        }
+    }
+}
+
+dependencies {
+
+    //imported modules
+    implementation project(':mn_onboarding')
+    implementation project(':mn_api')
+    implementation project(':mn_assets')
+    implementation project(':mn_model')
+    implementation project(':mn_route')
+    implementation project(':mn_utils')
+    implementation project(':mn_dashboard')
+
+    //dependencies
+
+    //Android
+    implementation Dependencies.ANDROID_CORE_KTX
+    implementation Dependencies.ANDROID_APP_COMPAT
+    implementation Dependencies.ANDROID_MATERIAL_DESIGN
+    implementation Dependencies.ANDROID_CONSTRAINT_LAYOUT
+
+    // Kotlin
+    implementation Dependencies.kotlin
+
+    // Timber
+    implementation Dependencies.timber
+
+    //Hilt
+    implementation Dependencies.HILT
+    kapt Dependencies.HILT_COMPILER
+
+    //Retrofit
+    implementation Dependencies.RETROFIT
+    implementation Dependencies.RETROFIT_CONVERTER
+    implementation Dependencies.RETROFIT_INTERCEPTOR
+
+    //Moshi
+    implementation Dependencies.MOSHI
+    kapt Dependencies.MOSHI_KAPT
+}
+repositories {
+    mavenCentral()
+}

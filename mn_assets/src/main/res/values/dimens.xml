@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="navigation_icon_size">@dimen/_10sdp</dimen>
+    <dimen name="navigation_logo_size">@dimen/_18sdp</dimen>
+    <dimen name="navigation_text_label_size">@dimen/_8ssp</dimen>
+    <dimen name="dimens_17dp">17dp</dimen>
+    <dimen name="dimens_30dp">30dp</dimen>
+    <dimen name="dimens_100dp">100dp</dimen>
+    <dimen name="dimens_5dp">5dp</dimen>
+    <dimen name="dimens_150">150dp</dimen>
+    <dimen name="image_3_4_height">155dp</dimen>
+    <dimen name="image_3_4_width">206dp</dimen>
+    <dimen name="login_image_size">@dimen/_24sdp</dimen>
+    <dimen name="login_login_signup_text_size">@dimen/_12ssp</dimen>
+    <dimen name="login_mobile_number_width">@dimen/_120sdp</dimen>
+    <dimen name="pm_navigation_navigation_width">72dp</dimen>
+    <dimen name="keyboard_number_padding_left_right">@dimen/_24ssp</dimen>
+    <dimen name="keyboard_number_padding_top_bottom">@dimen/_8ssp</dimen>
+    <dimen name="keyboard_number_text_size">@dimen/_10ssp</dimen>
+    <dimen name="margin_extra_small">@dimen/_2sdp</dimen>
+    <dimen name="margin_small">@dimen/_4sdp</dimen>
+    <dimen name="margin_big">@dimen/_8sdp</dimen>
+    <dimen name="margin_extra_big">@dimen/_16sdp</dimen>
+    <dimen name="padding_extra_small">@dimen/_2sdp</dimen>
+    <dimen name="padding_small">@dimen/_4sdp</dimen>
+    <dimen name="padding_big">@dimen/_8sdp</dimen>
+    <dimen name="padding_extra_big">@dimen/_16sdp</dimen>
+    <dimen name="logo_margin_top">@dimen/_80sdp</dimen>
+</resources>

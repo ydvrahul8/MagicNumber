@@ -1,0 +1,18 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+dependencies {
+    implementation project(':mn_assets')
+    // Kotlin
+    implementation Dependencies.kotlin
+    implementation Dependencies.ANDROIDX_FRAGMENT
+    implementation Dependencies.ANDROID_CONSTRAINT_LAYOUT
+
+    //Glide
+    implementation Dependencies.GLIDE
+    implementation Dependencies.GLIDE_COMPILER
+}
+repositories {
+    mavenCentral()
+}

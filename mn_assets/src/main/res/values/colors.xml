@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FF3232</color>
+    <color name="colorPrimaryDark">#FF3232</color>
+    <color name="colorAccent">#223E3B</color>
+    <color name="error">#EDE81313</color>
+    <color name="white">#fff</color>
+    <color name="green">#15A535</color>
+    <color name="bgBottomNavigation">#fe485a</color>
+    <color name="textColor">#151515</color>
+    <color name="backgroundColor">#FFFFFF</color>
+    <color name="background">#F1F1F1</color>
+    <color name="colorPrimaryVariant">#FF3232</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
+    <color name="colorSecondary">#FF3232</color>
+    <color name="colorSecondaryVariant">#FF3232</color>
+    <color name="colorOnSecondary">#FFFFFF</color>
+    <color name="colorError">#DD6B55</color>
+    <color name="colorOnError">#FFFFFF</color>
+    <color name="colorSurface">#FFFFFF</color>
+    <color name="colorOnSurface">#b4000000</color>
+    <color name="colorBackground">#FFFFFF</color>
+    <color name="colorOnBackground">#b4000000</color>
+    <color name="textheading4">#4f5661</color>
+    <color name="black">#000000</color>
+    <color name="light_blue">#C3DAFF</color>
+    <color name="light_yellow">#26FFB800</color>
+    <color name="editText_background">#2f2f2f</color>
+
+</resources>

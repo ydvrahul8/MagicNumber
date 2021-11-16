@@ -1,0 +1,38 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-parcelize'
+apply plugin: 'dagger.hilt.android.plugin'
+
+dependencies {
+    implementation project(':mn_model')
+
+    // Kotlin
+    implementation Dependencies.kotlin
+
+    implementation Dependencies.RETROFIT
+    implementation Dependencies.RETROFIT_CONVERTER
+    implementation Dependencies.RETROFIT_INTERCEPTOR
+    implementation Dependencies.MOSHI
+    kapt Dependencies.MOSHI_KAPT
+
+    implementation Dependencies.timber
+
+    //Hilt
+    implementation Dependencies.HILT
+    kapt Dependencies.HILT_COMPILER
+
+    //coroutine
+    implementation Dependencies.COROUTINES_CORE
+    implementation Dependencies.COROUTINES_ANDROID
+
+    //lifecycle
+    implementation Dependencies.LIFECYCLE_COMMON
+    implementation Dependencies.LIFECYCLE_VIEWMODEL
+    implementation Dependencies.LIFECYCLE_LIVEDATA
+    implementation Dependencies.LIFECYCLE
+
+}
+repositories {
+    mavenCentral()
+}

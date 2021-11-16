@@ -1,0 +1,18 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'dagger.hilt.android.plugin'
+
+dependencies {
+    implementation project(':mn_assets')
+    implementation project(':mn_model')
+    // Kotlin
+    implementation Dependencies.kotlin
+
+    //Hilt
+    implementation Dependencies.HILT
+    kapt Dependencies.HILT_COMPILER
+}
+repositories {
+    mavenCentral()
+}

@@ -1,0 +1,56 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'dagger.hilt.android.plugin'
+
+android {
+
+    // Add for using latest experimental build of Android Extensions
+    androidExtensions {
+        experimental = true
+    }
+}
+
+dependencies {
+    //imported modules
+    implementation project(':mn_route')
+    implementation project(':mn_assets')
+    implementation project(':mn_utils')
+    implementation project(':mn_api')
+    implementation project(':mn_model')
+
+    // Kotlin
+    implementation Dependencies.kotlin
+
+    implementation Dependencies.ANDROID_CONSTRAINT_LAYOUT
+    implementation Dependencies.ANDROID_APP_COMPAT
+    implementation Dependencies.ANDROIDX_FRAGMENT
+    implementation Dependencies.ANDROIDX_LEANBACK
+    implementation Dependencies.ANDROID_MATERIAL_DESIGN
+
+    implementation Dependencies.RETROFIT
+    implementation Dependencies.RETROFIT_CONVERTER
+    implementation Dependencies.MOSHI
+    kapt Dependencies.MOSHI_KAPT
+
+    //Hilt
+    implementation Dependencies.HILT
+    implementation Dependencies.HILT_VIEWMODEL
+    kapt Dependencies.HILT_COMPILER
+    kapt Dependencies.HILT_ANDROID_COMPILER
+
+    //coroutine
+    implementation Dependencies.COROUTINES_CORE
+    implementation Dependencies.COROUTINES_ANDROID
+
+    //lifecycle
+    implementation Dependencies.LIFECYCLE_LIVEDATA
+    implementation Dependencies.LIFECYCLE_COMMON
+    implementation Dependencies.LIFECYCLE
+
+    //Glide
+    implementation Dependencies.GLIDE
+    implementation Dependencies.GLIDE_COMPILER
+
+}

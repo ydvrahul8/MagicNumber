@@ -1,0 +1,24 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'org.jlleitschuh.gradle.ktlint'
+
+dependencies {
+    //imported modules
+    implementation project(':mn_route')
+    implementation project(':mn_utils')
+    implementation project(':mn_assets')
+
+    // Kotlin
+    implementation Dependencies.kotlin
+
+    // AndroidX
+    implementation Dependencies.ANDROIDX_FRAGMENT
+    implementation Dependencies.ANDROID_CONSTRAINT_LAYOUT
+    implementation Dependencies.ANDROID_APP_COMPAT
+    implementation Dependencies.ANDROID_MATERIAL_DESIGN
+}
+repositories {
+    mavenCentral()
+}

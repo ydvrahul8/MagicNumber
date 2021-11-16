@@ -1,0 +1,20 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+
+dependencies {
+
+    // Kotlin
+    implementation Dependencies.kotlin
+    implementation Dependencies.INTUIT_SDP
+    implementation Dependencies.INTUIT_SSP
+
+    //otp
+    implementation Dependencies.OTP_VIEW
+
+    //android
+    implementation Dependencies.ANDROID_MATERIAL_DESIGN
+
+}
+repositories {
+    mavenCentral()
+}
