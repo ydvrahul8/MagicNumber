@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.result.contract.ActivityResultContracts
 import com.magicnumber.mn_route.dashboard.DashboardRoute
+import com.magicnumber.mn_route.login.LoginRoute
 import com.magicnumber.mn_route.splash.SplashRoute
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
@@ -16,18 +17,18 @@ class MainActivity : AppCompatActivity() {
     lateinit var splashRoute: SplashRoute
 
     @Inject
-    lateinit var dashboardRoute: DashboardRoute
+    lateinit var loginRoute: LoginRoute
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         when (savedInstanceState) {
             null -> openSplashScreen()
-            else -> openDashboardScreen()
+            else -> openLoginScreen()
         }
     }
 
-    private fun openDashboardScreen() {
-        startActivity(dashboardRoute.buildDashboardRoute().intent)
+    private fun openLoginScreen() {
+        startActivity(loginRoute.buildLoginRoute().intent)
         finish()
     }
 
@@ -35,7 +36,7 @@ class MainActivity : AppCompatActivity() {
         var resultLauncher =
             registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
                 if (result.resultCode == Activity.RESULT_OK) {
-                    openDashboardScreen()
+                    openLoginScreen()
                 } else {
                     finish()
                 }

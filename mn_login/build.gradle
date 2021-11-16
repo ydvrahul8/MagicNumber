@@ -14,7 +14,6 @@ dependencies {
 
     implementation Dependencies.ANDROID_CONSTRAINT_LAYOUT
     implementation Dependencies.ANDROIDX_FRAGMENT
-    implementation Dependencies.ANDROIDX_LEANBACK
     implementation Dependencies.ANDROID_MATERIAL_DESIGN
 
 
@@ -35,9 +34,6 @@ dependencies {
 
     //otp
     implementation Dependencies.OTP_VIEW
-
-    //auth0
-    implementation Dependencies.AUHT0
 
     //Retrofit
     implementation Dependencies.RETROFIT

@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/root_view"
+    android:padding="@dimen/padding_extra_big"
     tools:context=".fragment.MobileNumberFragment">
 
     <ImageView
@@ -21,8 +22,9 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_big"
+        android:layout_marginTop="@dimen/margin_extra_big"
         android:gravity="center"
+        android:textAllCaps="true"
         android:text="@string/app_name"
         android:textAppearance="@style/AppTextAppearance.Headline2"
         android:textStyle="bold"
@@ -32,59 +34,63 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_big"
+        android:layout_marginTop="@dimen/enter_phone_margin_top"
         android:gravity="center"
+        android:layout_marginBottom="@dimen/margin_big"
         android:text="@string/enter_yout_mobile"
-        android:textAppearance="@style/AppTextAppearance.Headline4"
+        android:textAppearance="@style/AppTextAppearance.Headline5"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_marginTop="@dimen/margin_big"
+    <com.hbb20.CountryCodePicker
+        android:id="@+id/code_picker"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:gravity="center"
-        android:padding="@dimen/padding_big"
+        app:ccpDialog_showPhoneCode="true"
+        app:ccp_showFullName="false"
+        app:ccp_showNameCode="false"
+        app:ccp_autoDetectCountry="true"
+        app:ccp_autoFormatNumber="true"
+        app:ccp_showArrow="true"
+        app:layout_constraintBottom_toBottomOf="@+id/editText"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2">
+        app:layout_constraintTop_toTopOf="@+id/editText" />
 
-        <com.hbb20.CountryCodePicker
-            android:id="@+id/code_picker"
-            android:layout_width="50dp"
-            app:ccp_showArrow="true"
-            android:layout_height="wrap_content"
-            app:ccp_autoDetectCountry="true"
-            app:ccp_autoFormatNumber="true"
-            app:ccpDialog_showPhoneCode="true"
-            app:ccpDialog_showNameCode="false"
-            app:ccp_showFullName="false"
-            />
 
-        <EditText
-            android:id="@+id/editText"
-            android:layout_width="0dp"
-            android:padding="@dimen/padding_small"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:background="@drawable/bg_rounded_red_rectangle"
-            android:hint="@string/enter_phone" />
-    </LinearLayout>
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="0dp"
+        android:layout_marginTop="@dimen/margin_extra_big"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/bg_rounded_red_rectangle"
+        android:hint="@string/enter_phone"
+        android:inputType="number"
+        android:digits="0123456789"
+        android:padding="@dimen/padding_big_edittext"
+        android:maxLength="10"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/code_picker"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
-        app:elevation="6dp"
         android:layout_margin="@dimen/margin_extra_big"
+        android:minWidth="32dp"
         android:src="@drawable/ic_baseline_arrow_forward_24"
         app:backgroundTint="@color/colorPrimary"
+        app:elevation="6dp"
+        app:layout_behavior="com.faisal.cvcd.anim.ScrollingFABAnimation"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
 </androidx.constraintlayout.widget.ConstraintLayout>

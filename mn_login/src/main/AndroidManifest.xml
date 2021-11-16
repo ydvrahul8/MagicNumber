@@ -5,7 +5,19 @@
     <application>
         <activity
             android:name=".activity.LoginActivity"
-            android:exported="false" />
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="@string/host_login"
+                    android:scheme="@string/schema" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

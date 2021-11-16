@@ -26,7 +26,6 @@ dependencies {
     implementation Dependencies.ANDROID_CONSTRAINT_LAYOUT
     implementation Dependencies.ANDROID_APP_COMPAT
     implementation Dependencies.ANDROIDX_FRAGMENT
-    implementation Dependencies.ANDROIDX_LEANBACK
     implementation Dependencies.ANDROID_MATERIAL_DESIGN
 
     implementation Dependencies.RETROFIT

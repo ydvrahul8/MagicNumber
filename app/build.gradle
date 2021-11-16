@@ -21,7 +21,7 @@ android {
         }
     }*/
     defaultConfig {
-        applicationId = "com.planetmarathi.tv"
+        applicationId = "com.magicnumber"
         versionCode = ConfigData.versionCode
         versionName = ConfigData.versionName
        // manifestPlaceholders = [auth0Domain: "@string/com_auth0_domain", auth0Scheme: "https"]
@@ -54,6 +54,7 @@ dependencies {
     implementation project(':mn_route')
     implementation project(':mn_utils')
     implementation project(':mn_dashboard')
+    implementation project(':mn_login')
 
     //dependencies
 
