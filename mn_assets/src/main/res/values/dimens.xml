@@ -21,12 +21,22 @@
     <dimen name="rounded_corner">8dp</dimen>
     <dimen name="margin_small">@dimen/_4sdp</dimen>
     <dimen name="margin_big">@dimen/_8sdp</dimen>
+    <dimen name="margin_medium">@dimen/_12sdp</dimen>
     <dimen name="margin_extra_big">@dimen/_16sdp</dimen>
     <dimen name="padding_extra_small">@dimen/_2sdp</dimen>
     <dimen name="padding_small">@dimen/_4sdp</dimen>
+    <dimen name="padding_medium">@dimen/_6sdp</dimen>
     <dimen name="padding_big">@dimen/_8sdp</dimen>
     <dimen name="padding_extra_big">@dimen/_16sdp</dimen>
     <dimen name="padding_big_edittext">@dimen/_12sdp</dimen>
     <dimen name="enter_phone_margin_top">@dimen/_40sdp</dimen>
     <dimen name="logo_margin_top">@dimen/_80sdp</dimen>
+    <dimen name="fab_min_width">32dp</dimen>
+    <dimen name="fab_elevation">6dp</dimen>
+    <dimen name="toolbar_icon_padding">16dp</dimen>
+    <dimen name="otpview_margin">@dimen/_40sdp</dimen>
+
+<!--    Textview text sizes...-->
+
+    <dimen name="text_size_small">@dimen/_12ssp</dimen>
 </resources>

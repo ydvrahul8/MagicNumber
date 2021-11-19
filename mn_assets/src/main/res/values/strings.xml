@@ -45,4 +45,8 @@
     <string name="enter_yout_mobile">Enter your mobile number</string>
     <string name="enter_phone">Enter Phone Number</string>
 
+    <string name="otp_that_has_been_sent_to_91_0989">Enter the 4-digit code sent to you at\n  +91 99066 66789.</string>
+    <string name="edit_number">Edit number</string>
+    <string name="resend_code">Resend code in 00:01</string>
+    <string name="terms_and_condition"><font color="#000000">By continuing I agree to the <font color="#FF3232">terms and conditions</font> of Magic Number</font></string>
 </resources>

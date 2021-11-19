@@ -1,96 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:id="@+id/root_view"
-    android:padding="@dimen/padding_extra_big"
-    tools:context=".fragment.MobileNumberFragment">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/logo_margin_top"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_lifeline_red" />
+    <data>
 
-    <TextView
-        android:id="@+id/textView"
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/root_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_extra_big"
-        android:gravity="center"
-        android:textAllCaps="true"
-        android:text="@string/app_name"
-        android:textAppearance="@style/AppTextAppearance.Headline2"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        android:layout_height="match_parent"
+        android:padding="@dimen/padding_extra_big"
+        tools:context=".fragment.MobileNumberFragment">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/enter_phone_margin_top"
-        android:gravity="center"
-        android:layout_marginBottom="@dimen/margin_big"
-        android:text="@string/enter_yout_mobile"
-        android:textAppearance="@style/AppTextAppearance.Headline5"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/textView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:srcCompat="@drawable/ic_lifeline_red" />
 
-    <com.hbb20.CountryCodePicker
-        android:id="@+id/code_picker"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:ccpDialog_showPhoneCode="true"
-        app:ccp_showFullName="false"
-        app:ccp_showNameCode="false"
-        app:ccp_autoDetectCountry="true"
-        app:ccp_autoFormatNumber="true"
-        app:ccp_showArrow="true"
-        app:layout_constraintBottom_toBottomOf="@+id/editText"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/editText" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_extra_big"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textAllCaps="true"
+            android:textAppearance="@style/AppTextAppearance.Headline2"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/code_picker"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/enter_phone_margin_top"
+            android:layout_marginBottom="@dimen/margin_big"
+            android:gravity="center"
+            android:text="@string/enter_yout_mobile"
+            android:textAppearance="@style/AppTextAppearance.Headline5"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <com.hbb20.CountryCodePicker
+            android:id="@+id/code_picker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_country_code"
+            android:padding="@dimen/padding_medium"
+            app:ccpDialog_showPhoneCode="true"
+            app:ccp_autoDetectCountry="true"
+            app:ccp_autoFormatNumber="true"
+            app:ccp_showArrow="true"
+            app:ccp_showFullName="false"
+            app:ccp_showNameCode="false"
+            app:ccp_textSize="@dimen/text_size_small"
+            app:layout_constraintBottom_toBottomOf="@+id/editText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/editText" />
 
 
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="0dp"
-        android:layout_marginTop="@dimen/margin_extra_big"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:background="@drawable/bg_rounded_red_rectangle"
-        android:hint="@string/enter_phone"
-        android:inputType="number"
-        android:digits="0123456789"
-        android:padding="@dimen/padding_big_edittext"
-        android:maxLength="10"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/code_picker"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        tools:ignore="TouchTargetSizeCheck" />
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_big"
+            android:layout_weight="1"
+            android:background="@drawable/bg_rounded_red_rectangle"
+            android:digits="0123456789"
+            android:hint="@string/enter_phone"
+            android:inputType="number"
+            android:maxLength="10"
+            android:padding="@dimen/padding_big_edittext"
+            android:textSize="@dimen/text_size_small"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/code_picker"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TouchTargetSizeCheck" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/margin_extra_big"
-        android:minWidth="32dp"
-        android:src="@drawable/ic_baseline_arrow_forward_24"
-        app:backgroundTint="@color/colorPrimary"
-        app:elevation="6dp"
-        app:layout_behavior="com.faisal.cvcd.anim.ScrollingFABAnimation"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:ignore="SpeakableTextPresentCheck" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/margin_extra_big"
+            android:minWidth="@dimen/fab_min_width"
+            android:src="@drawable/ic_baseline_arrow_forward_24"
+            app:backgroundTint="@color/colorPrimary"
+            app:elevation="@dimen/fab_elevation"
+            app:layout_behavior="com.faisal.cvcd.anim.ScrollingFABAnimation"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

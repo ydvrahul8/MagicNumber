@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/root_view"
+        tools:context=".fragment.OTPFragment">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_extra_big"
+            android:gravity="center"
+            android:padding="@dimen/padding_extra_big"
+            android:id="@+id/textView_enterOTP"
+            android:text="@string/otp_that_has_been_sent_to_91_0989"
+            android:textAppearance="@style/AppTextAppearance.Headline5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+        <com.mukesh.OtpView
+            android:id="@+id/etOtp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_extra_big"
+            android:inputType="number"
+            android:textColor="@color/textColor"
+            android:textSize="15sp"
+            app:itemCount="4"
+            app:itemHeight="48dp"
+            app:itemSpacing="@dimen/margin_extra_big"
+            app:itemWidth="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_enterOTP"
+            app:viewType="none"
+            android:itemBackground="@drawable/bg_rounded_red_rectangle" />
+
+        <TextView
+            android:id="@+id/textView_resendOTP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_extra_big"
+            android:gravity="center"
+            android:text="@string/resend_code"
+            android:textAppearance="@style/AppTextAppearance.Subtitle2"
+            app:layout_constraintEnd_toEndOf="@+id/etOtp"
+            app:layout_constraintStart_toStartOf="@+id/etOtp"
+            app:layout_constraintTop_toBottomOf="@+id/etOtp" />
+
+        <TextView
+            android:id="@+id/textView_editNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/edit_number"
+            android:textAppearance="@style/AppTextAppearance.Headline5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="@dimen/margin_extra_big"
+            app:layout_constraintTop_toBottomOf="@+id/textView_resendOTP" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/margin_extra_big"
+            android:minWidth="@dimen/fab_min_width"
+            android:src="@drawable/ic_baseline_arrow_forward_24"
+            app:backgroundTint="@color/colorPrimary"
+            app:elevation="@dimen/fab_elevation"
+            app:layout_behavior="com.faisal.cvcd.anim.ScrollingFABAnimation"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/terms_and_condition"
+            app:layout_constraintBottom_toBottomOf="@+id/fab"
+            android:layout_margin="@dimen/margin_extra_big"
+            app:layout_constraintEnd_toStartOf="@+id/fab"
+            android:gravity="start"
+            android:textAppearance="@style/AppTextAppearance.Body2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/fab" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
