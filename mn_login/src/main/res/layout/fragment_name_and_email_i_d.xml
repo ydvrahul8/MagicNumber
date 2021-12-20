@@ -8,10 +8,10 @@
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/root_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/root_view"
-        tools:context=".fragment.OTPFragment">
+        tools:context=".fragment.NameAndEmailIDFragment">
 
         <ImageView
             android:id="@+id/imageView_backButton"
@@ -23,60 +23,64 @@
             app:srcCompat="@drawable/ic_arrow" />
 
         <TextView
+            android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_extra_big"
             android:gravity="center"
-            android:padding="@dimen/padding_extra_big"
-            android:id="@+id/textView_enterOTP"
-            android:text="@string/otp_that_has_been_sent_to_91_0989"
+            android:text="@string/name"
             android:textAppearance="@style/AppTextAppearance.Headline5"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView_backButton" />
 
-        <com.mukesh.OtpView
-            android:id="@+id/etOtp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_extra_big"
-            android:inputType="number"
-            android:textColor="@color/textColor"
-            android:textSize="15sp"
-            app:itemCount="4"
-            app:itemHeight="48dp"
-            app:itemSpacing="@dimen/margin_extra_big"
-            app:itemWidth="48dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView_enterOTP"
-            app:viewType="none"
-            android:itemBackground="@drawable/bg_rounded_red_shadowed_rectangle" />
-
-        <TextView
-            android:id="@+id/textView_resendOTP"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_extra_big"
-            android:gravity="center"
-            android:text="@string/resend_code"
-            android:textAppearance="@style/AppTextAppearance.Subtitle2"
-            app:layout_constraintEnd_toEndOf="@+id/etOtp"
-            android:textColor="@color/secondary_text_color"
-            app:layout_constraintStart_toStartOf="@+id/etOtp"
-            app:layout_constraintTop_toBottomOf="@+id/etOtp" />
-
-        <TextView
-            android:id="@+id/textView_editNumber"
+        <EditText
+            android:id="@+id/editText_name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_extra_big"
+            android:layout_marginTop="@dimen/margin_big"
+            android:layout_marginEnd="@dimen/margin_extra_big"
+            android:layout_weight="1"
+            android:background="@drawable/bg_rounded_red_shadowed_rectangle"
+            android:digits="abcdefghijklmnopqrstuvwxyz "
             android:gravity="center"
-            android:text="@string/edit_number"
+            android:hint="@string/enter_name"
+            android:inputType="textPersonName"
+            android:padding="@dimen/padding_big_edittext"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+        <TextView
+            android:id="@+id/textView_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/enter_phone_margin_top"
+            android:gravity="center"
+            android:text="@string/email"
             android:textAppearance="@style/AppTextAppearance.Headline5"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="@dimen/margin_extra_big"
-            app:layout_constraintTop_toBottomOf="@+id/textView_resendOTP" />
+            app:layout_constraintTop_toBottomOf="@+id/editText_name" />
+
+        <EditText
+            android:id="@+id/editText_email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_extra_big"
+            android:layout_marginTop="@dimen/margin_big"
+            android:layout_marginEnd="@dimen/margin_extra_big"
+            android:layout_weight="1"
+            android:background="@drawable/bg_rounded_red_shadowed_rectangle"
+            android:digits="abcdefghijklmnopqrstuvwxyz "
+            android:gravity="center"
+            android:hint="@string/enter_email"
+            android:inputType="textPersonName"
+            android:padding="@dimen/padding_big_edittext"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_email" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab"
@@ -104,6 +108,7 @@
             android:textAppearance="@style/AppTextAppearance.Body2"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/fab" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

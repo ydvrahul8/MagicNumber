@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".fragment.ProfileFragment">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_marginTop="@dimen/margin_section_height_2"
+                android:src="@drawable/ic_baseline_account_circle_24"
+                app:civ_border_color="#FF000000"
+                app:civ_border_width="2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@+id/profile_image"
+                app:layout_constraintEnd_toEndOf="@+id/profile_image"
+                app:layout_constraintStart_toEndOf="@+id/profile_image"
+                app:srcCompat="@drawable/ic_baseline_edit_24" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textView_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:text="@string/balance"
+                android:textAllCaps="true"
+                android:textAppearance="@style/AppTextAppearance.Headline5"
+                android:textColor="@color/textColor"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/textView_payNow"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView_payNow" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textView_payNow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_extra_big"
+                android:layout_marginEnd="@dimen/margin_medium"
+                android:background="@drawable/bg_rounded_red_rectangle"
+                android:paddingStart="@dimen/padding_big"
+                android:paddingTop="@dimen/padding_big"
+                android:paddingEnd="@dimen/padding_big"
+                android:paddingBottom="@dimen/padding_big"
+                android:text="@string/add_money"
+                android:textAppearance="@style/AppTextAppearance.Headline1"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_size_extra_small1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profile_image" />
+
+            <TextView
+                android:id="@+id/textView_fullName"
+                style="@style/grey_bg_textView"
+                android:layout_marginTop="@dimen/margin_section_height_2"
+                android:text="@string/dummy_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_payNow" />
+
+            <TextView
+                android:id="@+id/textView_emailId"
+                style="@style/grey_bg_textView"
+                android:text="@string/dummy_email"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_fullName" />
+
+            <TextView
+                android:id="@+id/textView_phoneNumber"
+                style="@style/grey_bg_textView"
+                android:text="@string/dummy_phoneNumber"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_emailId" />
+
+            <TextView
+                android:id="@+id/textView_history"
+                style="@style/grey_bg_textView"
+                android:text="@string/history"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_phoneNumber" />
+
+            <TextView
+                android:id="@+id/textView_share"
+                style="@style/grey_bg_textView"
+                android:text="@string/share"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_history" />
+
+            <TextView
+                android:id="@+id/textView_aboutUs"
+                style="@style/grey_bg_textView"
+                android:text="@string/about_us"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_share" />
+
+            <TextView
+                android:id="@+id/textView_editProfile"
+                style="@style/grey_bg_textView"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="@dimen/margin_medium"
+                android:background="@drawable/bg_grey_rectangle"
+                android:paddingStart="@dimen/padding_edit_profile"
+                android:paddingEnd="@dimen/padding_edit_profile"
+                android:text="@string/edit_profile"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_aboutUs" />
+
+            <TextView
+                android:id="@+id/textView_logout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginBottom="@dimen/margin_medium"
+                android:gravity="center"
+                android:padding="@dimen/padding_big"
+                android:text="@string/logout"
+                android:textAppearance="@style/AppTextAppearance.Headline6"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_editProfile" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

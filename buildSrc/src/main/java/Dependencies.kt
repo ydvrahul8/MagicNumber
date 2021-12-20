@@ -32,6 +32,9 @@ object Dependencies {
     const val ANDROID_MATERIAL_DESIGN = "com.google.android.material:material:${Versions.material}"
     const val ANDROID_CONSTRAINT_LAYOUT = "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
 
+    const val NAVIGATION_FRAGMENT = "androidx.navigation:navigation-fragment-ktx:${Versions.navigation}"
+    const val NAVIGATION_UI = "androidx.navigation:navigation-ui-ktx:${Versions.navigation}"
+
     val JUNIT by lazy { "junit:junit:${Versions.jUnit}" }
     val JUNIT_ANDROID by lazy { "androidx.test.ext:${Versions.junitAndroid}" }
     val ESPRESSO by lazy { "androidx.test.espresso:espresso-core:${Versions.espresso}" }
@@ -75,6 +78,8 @@ object Dependencies {
     const val AUHT0 = "com.auth0.android:auth0:${Versions.auth0}"
 
     const val COUNTRY_PICKER = "com.hbb20:ccp:${Versions.country_picker}"
+
+    const val CIRCLE_IMAGEVIEW = "de.hdodenhof:circleimageview:${Versions.circle_imageView}"
 
 }
 

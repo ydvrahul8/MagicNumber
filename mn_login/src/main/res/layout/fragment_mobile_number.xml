@@ -11,7 +11,6 @@
         android:id="@+id/root_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="@dimen/padding_extra_big"
         tools:context=".fragment.MobileNumberFragment">
 
         <ImageView
@@ -46,16 +45,13 @@
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/enter_phone_margin_top"
             android:layout_marginBottom="@dimen/margin_big"
             android:gravity="center"
             android:text="@string/enter_yout_mobile"
             android:textAppearance="@style/AppTextAppearance.Headline5"
-            android:textStyle="bold"
-            android:visibility="gone"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
+            android:layout_marginStart="@dimen/margin_big"
+            app:layout_constraintBottom_toTopOf="@+id/editText"
+            app:layout_constraintStart_toEndOf="@+id/code_picker" />
 
         <com.hbb20.CountryCodePicker
             android:id="@+id/code_picker"
@@ -66,10 +62,12 @@
             app:ccpDialog_showPhoneCode="true"
             app:ccp_autoDetectCountry="true"
             app:ccp_autoFormatNumber="true"
+            android:layout_marginStart="@dimen/margin_extra_big"
             app:ccp_showArrow="true"
             app:ccp_showFullName="false"
             app:ccp_showNameCode="false"
             app:ccp_textSize="@dimen/text_size_small"
+            app:ccp_countryPreference="IN,US,SG,GB,AE,CA,AU"
             app:layout_constraintBottom_toBottomOf="@+id/editText"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/editText" />
@@ -81,10 +79,11 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_big"
             android:layout_weight="1"
-            android:background="@drawable/bg_rounded_red_rectangle"
+            android:background="@drawable/bg_rounded_red_shadowed_rectangle"
             android:digits="0123456789"
             android:hint="@string/enter_phone"
             android:inputType="number"
+            android:layout_marginEnd="@dimen/margin_extra_big"
             android:maxLength="10"
             android:padding="@dimen/padding_big_edittext"
             android:textSize="@dimen/text_size_small"

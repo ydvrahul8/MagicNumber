@@ -1,4 +1,5 @@
 object Versions {
+    const val circle_imageView="3.1.0"
     const val country_picker = "2.5.4"
     const val auth0 = "2.4.0"
     const val otp_view = "2.0.0"
@@ -12,6 +13,7 @@ object Versions {
     const val appCompat = "1.3.1"
     const val material = "1.4.0"
     const val constraintLayout = "2.1.0"
+    const val navigation = "2.3.5"
     const val jUnit = "4.13.2"
     const val junitAndroid = "1.1.3"
     const val espresso = "3.4.0"

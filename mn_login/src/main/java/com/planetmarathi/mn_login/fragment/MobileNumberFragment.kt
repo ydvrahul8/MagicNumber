@@ -1,29 +1,15 @@
 package com.planetmarathi.mn_login.fragment
 
-import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
+import com.magicnumber.mn_utils.base.BaseFragment
 import com.planetmarathi.mn_login.R
+import com.planetmarathi.mn_login.databinding.FragmentMobileNumberBinding
 
-class MobileNumberFragment : Fragment() {
+class MobileNumberFragment : BaseFragment<FragmentMobileNumberBinding>(R.layout.fragment_mobile_number) {
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_mobile_number, container, false)
-    }
-
-    companion object {
-
-        @JvmStatic
-        fun newInstance() =
-            MobileNumberFragment().apply {
-                arguments = Bundle().apply {
-                }
-            }
+    override fun FragmentMobileNumberBinding.initialize() {
+        binding.fab.setOnClickListener {
+            findNavController().navigate(R.id.action_mobileNumberFragment_to_OTPFragment)
+        }
     }
 }

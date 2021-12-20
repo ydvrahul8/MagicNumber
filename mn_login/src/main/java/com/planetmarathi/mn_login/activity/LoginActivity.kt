@@ -1,15 +1,14 @@
 package com.planetmarathi.mn_login.activity
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.magicnumber.mn_utils.extensions.replaceFragment
+import androidx.appcompat.app.AppCompatActivity
 import com.planetmarathi.mn_login.R
-import com.planetmarathi.mn_login.fragment.MobileNumberFragment
-import com.planetmarathi.mn_login.fragment.OTPFragment
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        replaceFragment(OTPFragment.newInstance())
+        setContentView(R.layout.activity_login)
     }
 }

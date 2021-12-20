@@ -5,10 +5,28 @@
     <string name="account">Account</string>
     <string name="originals">Originals</string>
     <string name="home">Home</string>
+    <string name="result">Result</string>
+    <string name="history">History</string>
     <string name="upcoming">Upcoming</string>
     <string name="profile">Profile</string>
     <string name="exit">Exit</string>
     <string name="play">Play</string>
+    <string name="table">Table 1</string>
+    <string name="pay_now">Pay Now</string>
+    <string name="slots">1 Slots</string>
+    <string name="total">Total - </string>
+    <string name="money">10000.00</string>
+    <string name="see_total_details">See Total Details</string>
+    <string name="select_and_pay">Select Number and Pay</string>
+    <string name="balance">Balance - %1$s</string>
+    <string name="add_money">Add Money</string>
+    <string name="dummy_email">johndoe@gmail.com</string>
+    <string name="dummy_name">John Doe</string>
+    <string name="dummy_phoneNumber">+91 9012345678</string>
+    <string name="about_us">About Us</string>
+    <string name="logout">Logout</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="share">Share</string>
 
     <string name="schema">magic_number</string>
 
@@ -44,6 +62,10 @@
     <string name="version">V %1$s</string>
     <string name="enter_yout_mobile">Enter your mobile number</string>
     <string name="enter_phone">Enter Phone Number</string>
+    <string name="enter_name">Enter Name</string>
+    <string name="enter_email">Enter Email ID</string>
+    <string name="name">Name</string>
+    <string name="email">Email ID</string>
 
     <string name="otp_that_has_been_sent_to_91_0989">Enter the 4-digit code sent to you at\n  +91 99066 66789.</string>
     <string name="edit_number">Edit number</string>

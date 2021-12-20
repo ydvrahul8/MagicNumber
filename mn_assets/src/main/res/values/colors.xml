@@ -27,5 +27,7 @@
     <color name="light_yellow">#26FFB800</color>
     <color name="editText_background">#2f2f2f</color>
     <color name="light_grey">#F4F4F4</color>
-
+    <color name="secondary_text_color">#BCBCBC</color>
+    <color name="bottom_navigation_unselected">#000000</color>
+    <color name="bottom_navigation_selected">#FF3232</color>
 </resources>

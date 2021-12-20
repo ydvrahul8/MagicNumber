@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/login_graph"
+    app:startDestination="@id/mobileNumberFragment">
+
+    <fragment
+        android:id="@+id/mobileNumberFragment"
+        android:name="com.planetmarathi.mn_login.fragment.MobileNumberFragment"
+        android:label="MobileNumberFragment" >
+        <action
+            android:id="@+id/action_mobileNumberFragment_to_OTPFragment"
+            app:destination="@id/OTPFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/nameAndEmailIDFragment"
+        android:name="com.planetmarathi.mn_login.fragment.NameAndEmailIDFragment"
+        android:label="NameAndEmailIDFragment" />
+    <fragment
+        android:id="@+id/OTPFragment"
+        android:name="com.planetmarathi.mn_login.fragment.OTPFragment"
+        android:label="OTPFragment" >
+        <action
+            android:id="@+id/action_OTPFragment_to_nameAndEmailIDFragment"
+            app:destination="@id/nameAndEmailIDFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+    </fragment>
+</navigation>

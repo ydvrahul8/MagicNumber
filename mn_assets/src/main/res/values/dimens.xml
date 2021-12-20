@@ -18,7 +18,8 @@
     <dimen name="keyboard_number_padding_top_bottom">@dimen/_8ssp</dimen>
     <dimen name="keyboard_number_text_size">@dimen/_10ssp</dimen>
     <dimen name="margin_extra_small">@dimen/_2sdp</dimen>
-    <dimen name="rounded_corner">8dp</dimen>
+    <dimen name="rounded_corner">10dp</dimen>
+    <dimen name="margin_medium_small">@dimen/_6sdp</dimen>
     <dimen name="margin_small">@dimen/_4sdp</dimen>
     <dimen name="margin_big">@dimen/_8sdp</dimen>
     <dimen name="margin_medium">@dimen/_12sdp</dimen>
@@ -27,16 +28,26 @@
     <dimen name="padding_small">@dimen/_4sdp</dimen>
     <dimen name="padding_medium">@dimen/_6sdp</dimen>
     <dimen name="padding_big">@dimen/_8sdp</dimen>
+    <dimen name="padding_count">@dimen/_9sdp</dimen>
     <dimen name="padding_extra_big">@dimen/_16sdp</dimen>
     <dimen name="padding_big_edittext">@dimen/_12sdp</dimen>
+    <dimen name="padding_edit_profile">@dimen/_20sdp</dimen>
     <dimen name="enter_phone_margin_top">@dimen/_40sdp</dimen>
     <dimen name="logo_margin_top">@dimen/_80sdp</dimen>
     <dimen name="fab_min_width">32dp</dimen>
     <dimen name="fab_elevation">6dp</dimen>
     <dimen name="toolbar_icon_padding">16dp</dimen>
     <dimen name="otpview_margin">@dimen/_40sdp</dimen>
+    <dimen name="margin_section_height_1">@dimen/_20sdp</dimen>
+    <dimen name="margin_section_height_2">@dimen/_24sdp</dimen>
+    <dimen name="margin_section_height_3">@dimen/_28sdp</dimen>
+    <dimen name="margin_section_height_4">@dimen/_32sdp</dimen>
+    <dimen name="margin_section_height_5">@dimen/_36sdp</dimen>
+    <dimen name="margin_section_height_6">@dimen/_40sdp</dimen>
 
 <!--    Textview text sizes...-->
 
     <dimen name="text_size_small">@dimen/_12ssp</dimen>
+    <dimen name="text_size_extra_small">@dimen/_10ssp</dimen>
+    <dimen name="text_size_extra_small1">@dimen/_9ssp</dimen>
 </resources>

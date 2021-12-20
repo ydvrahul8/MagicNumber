@@ -23,6 +23,10 @@ dependencies {
     kapt Dependencies.HILT_COMPILER
     kapt Dependencies.HILT_ANDROID_COMPILER
 
+    //navigation
+    implementation Dependencies.NAVIGATION_FRAGMENT
+    implementation Dependencies.NAVIGATION_UI
+
     //coroutine
     implementation Dependencies.COROUTINES_CORE
     implementation Dependencies.COROUTINES_ANDROID
